@@ -2,6 +2,11 @@ import discord
 from discord.ext import commands
 from discord_slash import SlashCommand
 from token import TOKEN
+from keep_alive import keep_alive
+
+keep_alive()
+token = os.environ.get(TOKEN)
+client.run(TOKEN)
 
 intents = discord.Intents.default()
 intents.typing = False
